@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text" format="reference" />
+    <attr name="hint" format="reference" />
+
+    <declare-styleable name="EditTextCustomView">
+        <attr name="text" />
+        <attr name="hint" />
+        <attr name="android:inputType" />
+        <attr name="required" format="boolean" />
+    </declare-styleable>
+</resources>

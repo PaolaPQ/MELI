@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/productFootnote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/product_footnote"
+        android:textColor="@color/textInfo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nuevo | 132"/>
+
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textTitle"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/productFootnote"
+        tools:text="Moto g6"/>
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@id/productTitle"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:src="@drawable/ic_launcher_background"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/productOldPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/textInfo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/productImage"
+        tools:text="$136.000"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/productSaleInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/productOldPrice">
+
+        <TextView
+            android:id="@+id/productNewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textTitle"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/productOff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$150.000" />
+
+        <TextView
+            android:id="@+id/productOff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/textPromo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/productNewPrice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="RelativeOverlap"
+            tools:text="4% OFF" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/product_button"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/productSaleInfo"
+        tools:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
